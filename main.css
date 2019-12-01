@@ -1,0 +1,134 @@
+body {
+  font-family: 'champagne__limousinesregular';
+  margin: 40px;
+  letter-spacing: 0.1em;
+}
+
+#page {
+  display: flex;
+  width: 70%;
+  margin: auto;
+  justify-content: center;
+  -webkit-box-shadow: -8px 8px 10px 5px rgba(7, 11, 31, 0.50);
+  -moz-box-shadow: -8px 8px 10px 5px rgb(7, 11, 31, 0.50);
+  box-shadow: -8px 8px 10px 5px rgba(7, 11, 31, 0.5);
+  position: relative;
+}
+
+svg{
+  position: absolute;
+  width: 100%;
+}
+
+
+.left-col {
+  width: 40%;
+  background-color: rgb(159, 167, 194);
+  /* background-color: rgb(229, 233, 241); */
+  padding: 10px;
+  padding-top: 350px;
+}
+
+.main-col {
+  width: 60%;
+  background-color: rgb(210, 215, 240);
+  padding: 10px;
+  padding-top: 200px;
+}
+
+.title{
+  color: rgb(63, 85, 180);
+  position: absolute;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.name{
+  margin-bottom: 0;
+  padding-left: 0.45em;
+  font-weight: 1000;
+  font-size: 50px;
+  letter-spacing: 0.45em;
+  
+}
+
+.subtitle{
+  letter-spacing: 1.4em;
+  font-size: 23px;
+  padding-left: 1.4em;
+}
+
+.category{
+  background-color: rgb(124, 137, 197);
+  padding: 10px;
+  width: 100%;
+  margin-left: -10px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-weight: 100;
+  font-size: 30px;
+  color: rgb(193, 200, 231);
+}
+
+.sub-category{
+  background-color: rgb(124, 137, 197, 0.5);
+  color: rgb(212, 216, 238);
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 0;
+  margin-left: -10px;
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.icon{
+  max-height: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 5px;
+  margin-left: 15px;
+  padding-top: 15px;
+}
+
+.date-container{
+  display: flex;
+  height: 30px;
+}
+
+.contact{
+  margin-top: 15px;
+}
+
+ul{
+  list-style-type: none;
+  padding-left:15px;
+}
+
+ul.right li::before {
+  content: "\2022";
+  color: rgb(159, 167, 194);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+ul.left li::before {
+  content:"\2022";
+  color:  rgb(210, 215, 240);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.paragraph{
+  margin-left: 15px;
+}
+
+.paragraph::first-letter{
+  font-family: 'champagne__limousinesbold';
+  font-weight: 900;
+  font-size: 20px;
+  color: rgb(63, 85, 180);
+}
