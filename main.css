@@ -4,10 +4,11 @@ body {
   letter-spacing: 0.1em;
 }
 
-#page {
+.page {
   display: flex;
-  width: 70%;
+  width: 100%;
   margin: auto;
+  margin-bottom: 40px;
   justify-content: center;
   -webkit-box-shadow: -8px 8px 10px 5px rgba(7, 11, 31, 0.50);
   -moz-box-shadow: -8px 8px 10px 5px rgb(7, 11, 31, 0.50);
@@ -23,17 +24,16 @@ svg{
 
 .left-col {
   width: 40%;
-  background-color: rgb(159, 167, 194);
-  /* background-color: rgb(229, 233, 241); */
+  background-color: rgb(182, 188, 207);
   padding: 10px;
-  padding-top: 350px;
+  padding-top: 230px;
 }
 
 .main-col {
   width: 60%;
-  background-color: rgb(210, 215, 240);
+  background-color: rgb(227, 230, 245);
   padding: 10px;
-  padding-top: 200px;
+  padding-top: 260px;
 }
 
 .title{
@@ -47,14 +47,14 @@ svg{
   margin-bottom: 0;
   padding-left: 0.45em;
   font-weight: 1000;
-  font-size: 50px;
+  font-size: 40px;
   letter-spacing: 0.45em;
   
 }
 
 .subtitle{
   letter-spacing: 1.4em;
-  font-size: 23px;
+  font-size: 18px;
   padding-left: 1.4em;
 }
 
@@ -131,4 +131,12 @@ ul.left li::before {
   font-weight: 900;
   font-size: 20px;
   color: rgb(63, 85, 180);
+}
+
+.left-col.bottom{
+  padding-top: 30px;
+}
+
+.main-col.bottom{
+  padding-top: 10px;
 }
