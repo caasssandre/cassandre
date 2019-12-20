@@ -6,9 +6,10 @@ body {
 
 .page {
   display: flex;
-  width: 100%;
-  margin: auto;
-  margin-bottom: 0px;
+  width: 794px;
+  height: 1122px;
+  /* margin: auto;
+  margin-bottom: 0px; */
   justify-content: center;
   position: relative;
   line-height: 20px;
@@ -37,17 +38,17 @@ body {
   margin-top: 0px;
   background-color: rgb(227, 230, 243);
   width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 45px;
+  padding-bottom: 45px;
 }
 
-.title.mid{
+/* .title.mid{
   margin-top:-5px;
 }
 
 .title.bot{
   margin-top: 27px;
-}
+} */
 
 .name{
   margin-bottom: 0;
@@ -69,7 +70,7 @@ body {
   padding: 10px;
   width: 100%;
   margin-left: -10px;
-  margin-top: 20px;
+  margin-top: 0px;
   margin-bottom: 0;
   font-weight: 100;
   font-size: 30px;
@@ -98,7 +99,8 @@ body {
 
 .date-container{
   display: flex;
-  height: 30px;
+  height: 25px;
+  margin-bottom: 15px;
 }
 
 .contact{
@@ -140,7 +142,7 @@ ul.left li::before {
 }
 
 .middle{
-  padding-top: 200px;
+  padding-top: 185px;
 }
 
 .bottom{
