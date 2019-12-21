@@ -1,3 +1,25 @@
+$primary-color: white;
+$accent-color:  rgb(63, 85, 180);
+$secondary-color: rgb(227, 230, 243);
+$tertiary-color:  rgb(124, 137, 197);
+
+@mixin mobile-small {
+  @media (max-width: 380px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 800px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+
 body {
   font-family: 'champagne__limousinesregular';
   margin: 0px;
@@ -6,54 +28,60 @@ body {
 }
 
 .page {
-  display: flex;
-  width: 794px;
-  height: 1122px;
-  padding: 10px;
+  width: 70%;
   margin:auto;
-  margin-top:10px;
   justify-content: center;
   position: relative;
   line-height: 20px;
-  /* border-style: solid;
-  border-color: rgb(63, 85, 180); */
   background-color: white;
+  @include tablet {
+    width:100%;
+  }
+  
 }
 
-
+.flex-container {
+  display: flex;
+  border-style: solid;
+  @include mobile {
+    flex-direction: column-reverse;
+  }
+  
+}
 .left-col {
+  border-style: solid;
   width: 35%;
   padding: 10px;
   margin-left: 10px;
-  padding-top: 215px;
+  @include mobile {
+    width:100%;
+    margin-left: 0;
+  }
 }
 
 .main-col {
   width: 65%;
   padding: 10px;
-  padding-top: 215px;
   margin-right: 10px;
   margin-left: 10px;
+  @include mobile {
+    width:100%;
+  }
 }
 
 .title{
   color: rgb(63, 85, 180);
-  position: absolute;
   text-align: center;
-  margin-top: 0px;
   background-color: rgb(227, 230, 243);
-  width: 794px;
+  width: 100%;
   padding-top: 45px;
   padding-bottom: 45px;
+  @include mobile {
+    padding-bottom:20px;
+    padding-top:20px;
+  }
 }
 
-/* .title.mid{
-  margin-top:-5px;
-}
-
-.title.bot{
-  margin-top: 27px;
-} */
 
 .name{
   margin-bottom: 0;
@@ -61,6 +89,14 @@ body {
   font-weight: 1000;
   font-size: 40px;
   letter-spacing: 0.45em;
+  @include mobile {
+    letter-spacing:0.25em;
+    font-size: 30px;
+  }
+  @include mobile-small {
+    letter-spacing:0.15em;
+    font-size: 20px;
+  }
   
 }
 
@@ -68,10 +104,18 @@ body {
   letter-spacing: 1.4em;
   font-size: 18px;
   padding-left: 1.4em;
+  @include mobile {
+    font-size:14px;
+    letter-spacing:0.8em;
+  }
+  @include mobile-small {
+    font-size:13px;
+    letter-spacing:0.4em;
+  }
 }
 
 .category{
-  background-color: rgb(124, 137, 197);
+  background-color:  rgb(124, 137, 197);
   padding: 10px;
   width: 100%;
   margin-left: -10px;
@@ -80,10 +124,14 @@ body {
   font-weight: 100;
   font-size: 30px;
   color: rgb(193, 200, 231);
+  @include mobile {
+    margin: auto;
+    // margin-right: -20px;
+  }
 }
 
 .sub-category{
-  background-color: rgb(124, 137, 197, 0.5);
+  background-color:  rgb(182, 191, 229);
   color: rgb(231, 232, 240);
   width: 100%;
   padding: 10px;
@@ -91,6 +139,9 @@ body {
   margin-left: -10px;
   margin-top: 0;
   font-size: 20px;
+  @include mobile {
+    margin: auto;
+  }
 }
 
 .icon{
@@ -145,12 +196,3 @@ ul.left li::before {
   font-size: 20px;
   color: rgb(63, 85, 180);
 }
-
-.middle{
-  padding-top: 185px;
-}
-
-.bottom{
-  padding-top: 185px;
-}
-
