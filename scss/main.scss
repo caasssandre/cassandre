@@ -1,0 +1,210 @@
+$primary-color: white;
+$accent-color:  rgb(63, 85, 180);
+$secondary-color: rgb(227, 230, 243);
+$tertiary-color:  rgb(124, 137, 197);
+
+@mixin resets {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+@mixin mobile-small {
+  @media (max-width: 380px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 800px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+
+body {
+  font-family: 'champagne__limousinesregular';
+  margin: 0px;
+  letter-spacing: 0.1em;
+  background-color: rgb(209, 215, 241);
+}
+
+.page {
+  width: 70%;
+  margin:auto;
+  justify-content: center;
+  position: relative;
+  line-height: 20px;
+  background-color: white;
+  @include tablet {
+    width:100%;
+  }
+  
+}
+
+.flex-container {
+  display: flex;
+  @include mobile {
+    flex-direction: column-reverse;
+  }
+}
+.left-col {
+  width: 35%;
+  padding-top: 10px;
+  margin-left: 10px;
+  @include resets;
+  @include mobile {
+    width:100%;
+    margin-left: 0;
+  }
+}
+
+.main-col {
+  width: 65%;
+  padding-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  @include resets;
+  @include mobile {
+    width:100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+.title{
+  color: rgb(63, 85, 180);
+  text-align: center;
+  background-color: rgb(227, 230, 243);
+  width: 100%;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  @include mobile {
+    padding-bottom:20px;
+    padding-top:20px;
+  }
+}
+
+
+.name{
+  margin-bottom: 0;
+  padding-left: 0.45em;
+  font-weight: 1000;
+  font-size: 40px;
+  letter-spacing: 0.45em;
+  @include mobile {
+    letter-spacing:0.25em;
+    font-size: 30px;
+  }
+  @include mobile-small {
+    letter-spacing:0.15em;
+    font-size: 20px;
+  }
+  
+}
+
+.subtitle{
+  letter-spacing: 1.4em;
+  font-size: 18px;
+  padding-left: 1.4em;
+  @include mobile {
+    font-size:14px;
+    letter-spacing:0.8em;
+  }
+  @include mobile-small {
+    font-size:13px;
+    letter-spacing:0.4em;
+  }
+}
+
+.category{
+  background-color:  rgb(124, 137, 197);
+  padding: 10px;
+  width: 100%;
+  margin:0px;
+  // margin-top: 0px;
+  // margin-bottom: 0;
+  font-weight: 100;
+  font-size: 30px;
+  color: rgb(193, 200, 231);
+  @include resets;
+  @include mobile {
+    margin: auto;
+    // margin-right: -20px;
+  }
+}
+
+.sub-category{
+  background-color:  rgb(182, 191, 229);
+  color: rgb(231, 232, 240);
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+  // margin-left: -10px;
+  // margin-top: 0;
+  font-size: 20px;
+  @include resets;
+  @include mobile {
+    margin: auto;
+  }
+}
+
+.icon{
+  max-height: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 5px;
+  margin-left: 15px;
+  padding-top: 15px;
+}
+
+.date-container{
+  display: flex;
+  height: 25px;
+  margin-bottom: 15px;
+}
+
+.contact{
+  margin-top: 15px;
+}
+
+ul{
+  list-style-type: none;
+}
+
+ul.right li::before {
+  content: "\2022";
+  color: rgb(159, 167, 194);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+ul.left li::before {
+  content:"\2022";
+  color:  rgb(210, 215, 240);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.paragraph{
+  padding: 10px;
+}
+
+.block {
+  padding: 10px;
+}
+
+.paragraph::first-letter{
+  font-family: 'champagne__limousinesbold';
+  font-weight: 900;
+  font-size: 20px;
+  color: rgb(63, 85, 180);
+}
