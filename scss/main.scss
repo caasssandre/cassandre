@@ -3,6 +3,12 @@ $accent-color:  rgb(63, 85, 180);
 $secondary-color: rgb(227, 230, 243);
 $tertiary-color:  rgb(124, 137, 197);
 
+@mixin resets {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
 @mixin mobile-small {
   @media (max-width: 380px) {
     @content;
@@ -42,17 +48,15 @@ body {
 
 .flex-container {
   display: flex;
-  border-style: solid;
   @include mobile {
     flex-direction: column-reverse;
   }
-  
 }
 .left-col {
-  border-style: solid;
   width: 35%;
-  padding: 10px;
+  padding-top: 10px;
   margin-left: 10px;
+  @include resets;
   @include mobile {
     width:100%;
     margin-left: 0;
@@ -61,11 +65,14 @@ body {
 
 .main-col {
   width: 65%;
-  padding: 10px;
+  padding-top: 10px;
   margin-right: 10px;
   margin-left: 10px;
+  @include resets;
   @include mobile {
     width:100%;
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 
@@ -118,12 +125,13 @@ body {
   background-color:  rgb(124, 137, 197);
   padding: 10px;
   width: 100%;
-  margin-left: -10px;
-  margin-top: 0px;
-  margin-bottom: 0;
+  margin:0px;
+  // margin-top: 0px;
+  // margin-bottom: 0;
   font-weight: 100;
   font-size: 30px;
   color: rgb(193, 200, 231);
+  @include resets;
   @include mobile {
     margin: auto;
     // margin-right: -20px;
@@ -135,10 +143,11 @@ body {
   color: rgb(231, 232, 240);
   width: 100%;
   padding: 10px;
-  margin-bottom: 0;
-  margin-left: -10px;
-  margin-top: 0;
+  margin: 0;
+  // margin-left: -10px;
+  // margin-top: 0;
   font-size: 20px;
+  @include resets;
   @include mobile {
     margin: auto;
   }
@@ -165,7 +174,6 @@ body {
 
 ul{
   list-style-type: none;
-  padding-left:15px;
 }
 
 ul.right li::before {
@@ -187,7 +195,11 @@ ul.left li::before {
 }
 
 .paragraph{
-  margin-left: 15px;
+  padding: 10px;
+}
+
+.block {
+  padding: 10px;
 }
 
 .paragraph::first-letter{

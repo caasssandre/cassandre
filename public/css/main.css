@@ -26,7 +26,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-style: solid;
 }
 
 @media (max-width: 800px) {
@@ -39,10 +38,14 @@ body {
 }
 
 .left-col {
-  border-style: solid;
   width: 35%;
-  padding: 10px;
+  padding-top: 10px;
   margin-left: 10px;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
 }
 
 @media (max-width: 800px) {
@@ -54,14 +57,21 @@ body {
 
 .main-col {
   width: 65%;
-  padding: 10px;
+  padding-top: 10px;
   margin-right: 10px;
   margin-left: 10px;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
 }
 
 @media (max-width: 800px) {
   .main-col {
     width: 100%;
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 
@@ -127,12 +137,15 @@ body {
   background-color: #7c89c5;
   padding: 10px;
   width: 100%;
-  margin-left: -10px;
-  margin-top: 0px;
-  margin-bottom: 0;
+  margin: 0px;
   font-weight: 100;
   font-size: 30px;
   color: #c1c8e7;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
 }
 
 @media (max-width: 800px) {
@@ -146,10 +159,13 @@ body {
   color: #e7e8f0;
   width: 100%;
   padding: 10px;
-  margin-bottom: 0;
-  margin-left: -10px;
-  margin-top: 0;
+  margin: 0;
   font-size: 20px;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
 }
 
 @media (max-width: 800px) {
@@ -181,7 +197,6 @@ body {
 
 ul {
   list-style-type: none;
-  padding-left: 15px;
 }
 
 ul.right li::before {
@@ -203,7 +218,11 @@ ul.left li::before {
 }
 
 .paragraph {
-  margin-left: 15px;
+  padding: 10px;
+}
+
+.block {
+  padding: 10px;
 }
 
 .paragraph::first-letter {
